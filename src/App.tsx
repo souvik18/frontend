@@ -2,7 +2,7 @@ import { useState } from "react";
 import FileUploadForm from "./components/FileUploadForm";
 import RecordTable from "./components/RecordTable";
 import type { FailedRecord, SuccessRecord } from "./types/records";
-import { MESSAGES } from "./constant";
+import { MESSAGES, SERVER_URL } from "./constant";
 
 const App = () => {
   const [uploadStatus, setUploadStatus] = useState<string>("");
@@ -14,7 +14,7 @@ const App = () => {
     formData.append("file", file);
 
     try {
-      const response = await fetch("/api/file-upload", {
+      const response = await fetch(SERVER_URL, {
         method: "POST",
         body: formData,
       });

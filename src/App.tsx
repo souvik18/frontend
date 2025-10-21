@@ -31,7 +31,11 @@ const App = () => {
         setSuccessRecords([]);
       }
     } catch (error) {
-      setUploadStatus(MESSAGES.validationFail+": "+ (error instanceof Error ? error.message : "Unknown error"));
+      setUploadStatus(
+        MESSAGES.validationFail +
+          ": " +
+          (error instanceof Error ? error.message : "Unknown error"),
+      );
     }
   };
 

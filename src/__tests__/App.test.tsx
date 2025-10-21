@@ -25,17 +25,17 @@ describe("App Component", () => {
     (fetch as jest.Mock).mockResolvedValueOnce({
       json: jest.fn().mockResolvedValueOnce(mockResponse),
     });
-  
+
     render(<App />);
-  
+
     const file = new File(["test"], "test.csv", { type: "text/csv" });
     const uploadButton = screen.getByRole("button", { name: /Upload/i });
-  
+
     fireEvent.change(screen.getByLabelText(/Choose file/i), {
       target: { files: [file] },
     });
     fireEvent.click(uploadButton);
-  
+
     await waitFor(() => {
       expect(screen.getByText(MESSAGES.uploadSuccess)).toBeInTheDocument();
     });

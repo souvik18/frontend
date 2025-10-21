@@ -6,7 +6,7 @@ A responsive web application built with React, TypeScript, and Vite that allows 
 ## Features
 - Upload CSV or XML files (max 5MB)
 
-- side validation using Zod
+- Side validation using Zod
 
 - Displays successful and failed records in styled tables
 
@@ -19,27 +19,33 @@ A responsive web application built with React, TypeScript, and Vite that allows 
 
 ## Installation
 
-Install my-project with npm
+Install 'frontend' with npm
 
 ```bash
 use node version above 20.19.0
 git clone https://github.com/souvik18/frontend.git
-cd my-project
+cd frontend
 npm install
 ```
-After complete the project setup 
+Run Project
 
 ```bash
 bash
 npm run dev
 ```
+Run Test Cases
+
+```bash
+bash
+npm run test
+```
+
 Choose File & Upload File 
 
 ```bash
 Accepted formats: .csv, .xml
 Max size: 5MB
 ```
-
 
 ## Project Structure
 

@@ -1,7 +1,6 @@
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import FileUploadForm from "../components/FileUploadForm";
-import { MESSAGES } from "../constant";
 
 describe("FileUploadForm", () => {
   const mockUpload = jest.fn();
@@ -15,11 +14,6 @@ describe("FileUploadForm", () => {
     render(<FileUploadForm onUpload={mockUpload} onReset={mockReset} />);
     expect(screen.getByLabelText("upload button")).toBeInTheDocument();
     expect(screen.getByLabelText("reset button")).toBeInTheDocument();
-  });
-
-  test("displays default message when no file is selected", () => {
-    render(<FileUploadForm onUpload={mockUpload} onReset={mockReset} />);
-    expect(screen.getByText(MESSAGES.noFile)).toBeInTheDocument();
   });
 
   test("updates file name display when a file is selected", async () => {

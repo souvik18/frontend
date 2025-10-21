@@ -22,7 +22,8 @@ A responsive web application built with React, TypeScript, and Vite that allows 
 Install my-project with npm
 
 ```bash
-git clone https://github.com/your-username/my-project.git
+use node version above 20.19.0
+git clone https://github.com/souvik18/frontend.git
 cd my-project
 npm install
 ```

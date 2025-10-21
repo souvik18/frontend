@@ -1,0 +1,15 @@
+export const MESSAGES = {
+  uploadSuccess: "Uploaded Successfully",
+  validationFail: "Validation failed on server",
+  uploadFail: "Upload failed. Please try again",
+  successfulRecords: "Successful Records",
+  failedRecords: "Failed Records",
+  errorType: "string",
+  success: "success",
+  failed: "failed",
+  reasons: "reason",
+  noFile: "No file chosen",
+  fileRequired: "File is required.",
+  csvXmlAllowd: "Only CSV or XML files are allowed.",
+  fileSideExceed: "File must be less than 5MB",
+};
